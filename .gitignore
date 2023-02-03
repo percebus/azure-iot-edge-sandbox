@@ -1,3 +1,10 @@
+!tmp/.gitkeep
+tmp/*
+
+###################
+### node ignore ###
+###################
+
 # Logs
 logs
 *.log
