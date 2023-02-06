@@ -1,13 +1,7 @@
 {
   "name": "azure-iot-edge-sandbox",
   "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
   "devDependencies": {
     "iotedge": "git@github.com:Azure/iotedge.git#^1.4.8",
     "vcpkg": "git@github.com:microsoft/vcpkg.git#^2022.11.14"
