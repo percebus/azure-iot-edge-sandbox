@@ -1,5 +1,6 @@
-[string]$deviceId = "TEST-connectivity"
+[string]$deviceId = "TEST-gateway"
 
 # IoT Edge Device
-New-CACertsEdgeDeviceCA $deviceId
 New-CACertsEdgeDeviceIdentity $deviceId
+New-CACertsEdgeDeviceCA "$deviceId-1"
+New-CACertsEdgeDeviceCA "$deviceId-2"
