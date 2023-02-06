@@ -19,7 +19,7 @@
     "bower:update": "npm  run bower -- update",
     "prebower:install": "npm run bower:update",
     "bower:install": "npm run bower -- install",
-    "update": "npm run bower:install && npm run cp:iotedge:tools:CACertificates",
+    "postinstall": "npm run bower:install && npm run cp:iotedge:tools:CACertificates",
     "test": "exit 0"
   },
   "repository": {
