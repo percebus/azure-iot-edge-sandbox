@@ -26,6 +26,10 @@ jobs:
         run: npm run setup:ci --if-present
       - name: npm install
         run: npm ci
+      - name: ls node_modules
+        run: ls -la ./node_modules
+      - name: ls bower_components
+        run: ls -la ./bower_components
 
       - name: lint
         run: npm run lint

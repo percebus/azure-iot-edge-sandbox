@@ -6,5 +6,5 @@ RUN npm run setup:ci --if-present
 RUN npm ci
 
 FROM base as certs
-RUN npm run cp:iotedge:tools:CACertificates
+RUN npm run iotedge:tools:CACertificates:update
 # RUN ./tmp/CACertificates/certGen.sh create_root_and_intermediate
