@@ -4,7 +4,7 @@
 # ~ is /home/iotedge-user
 # But when run as sudo (root)
 # it would be /root
-cp -r ./eflow/ /
+cp --verbose -r ./eflow/ /
 
 sudo chown aziotcs:aziotcs /var/aziot/certs
 sudo chmod 755 /var/aziot/certs
