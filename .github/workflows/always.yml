@@ -26,6 +26,8 @@ jobs:
         run: npm run setup:ci --if-present
       - name: npm install
         run: npm ci
+      - name: bower install
+        run : npm run update # XXX should be postinstall
 
       - name: lint
         run: npm run lint
