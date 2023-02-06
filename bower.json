@@ -9,6 +9,7 @@
     "tests"
   ],
   "devDependencies": {
-    "iotedge": "git@github.com:Azure/iotedge.git#^1.4.8"
+    "iotedge": "git@github.com:Azure/iotedge.git#^1.4.8",
+    "vcpkg": "git@github.com:microsoft/vcpkg.git#^2022.11.14"
   }
 }
