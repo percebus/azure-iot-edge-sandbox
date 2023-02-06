@@ -16,9 +16,12 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+        with: # XXX?
+          persist-credentials: false
+      - name: git config url insteadOf ssh
+        run: git config --global url."https://${{ secrets.GH_TOKEN }}@github.com/".insteadOf ssh://git@github.com/
       - name: ls
         run: ls -la
-
 
       # SRC https://stackoverflow.com/questions/63104643/git-permission-denied-publickey-when-accessing-server-through-github-actions-c
       # - name: Setup SSH Keys and known_hosts
@@ -29,13 +32,16 @@ jobs:
       #       ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
 
       # SRC https://github.com/marketplace/actions/webfactory-ssh-agent
-      - uses: webfactory/ssh-agent@v0.7.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      # - uses: webfactory/ssh-agent@v0.7.0
+      #   with:
+      #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      # XXX
+      # # XXX
       # - name: ssh git@GitHub.com
       #   run: ssh -vT git@github.com
+
+              with:
+          persist-credentials: false
 
 
       - name: setup node
