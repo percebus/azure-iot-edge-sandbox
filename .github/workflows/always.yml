@@ -19,7 +19,9 @@ jobs:
         with: # XXX?
           persist-credentials: false
       - name: git config url insteadOf ssh
-        run: git config --global url."https://${{ secrets.GH_TOKEN }}@github.com/".insteadOf ssh://git@github.com/
+        run: >
+          git config --global url."https://${{ secrets.GH_TOKEN }}@github.com/".insteadOf
+          ssh://git@github.com/
       - name: ls
         run: ls -la
 
@@ -40,10 +42,6 @@ jobs:
       # - name: ssh git@GitHub.com
       #   run: ssh -vT git@github.com
 
-              with:
-          persist-credentials: false
-
-
       - name: setup node
         uses: actions/setup-node@v3
         with:
@@ -53,7 +51,7 @@ jobs:
       - name: npm install
         run: npm ci
       - name: bower install
-        run : bower install # XXX should be postinstall
+        run: bower install # XXX should be postinstall
 
       - name: lint
         run: npm run lint
