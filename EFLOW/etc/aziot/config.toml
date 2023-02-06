@@ -16,6 +16,18 @@ additional_info="file:///etc/product-info.toml"
 #
 # local_gateway_hostname = "my-parent-device"
 
+
+# ==============================================================================
+# Trust bundle cert
+# ==============================================================================
+#
+# If you have any trusted CA certificates required for Edge module communication,
+# uncomment the next line and set the value to a file URI for
+# the path of the file.
+#
+trust_bundle_cert = "file:///var/aziot/certs/azure-iot.root.ca.cert.pem"
+
+
 # ==============================================================================
 # Cloud Timeout and Retry Behavior
 # ==============================================================================
@@ -248,3 +260,23 @@ additional_info="file:///etc/product-info.toml"
 # [aziot_keys]
 # pkcs11_lib_path = "/usr/lib/libmypkcs11.so"
 # pkcs11_base_slot = "pkcs11:slot-id=0?pin-value=1234"
+
+# ==============================================================================
+# Edge CA certificate
+# ==============================================================================
+#
+# If you have your own Edge CA certificate that you want all module certificates
+# to be issued by, uncomment one of the sections below and replace the values with
+# your own.
+
+# Edge CA certificate loaded from a file:
+# ---------------------
+
+# [edge_ca]
+cert = "file:///var/aziot/certs/iot-edge-device-ca-full-chain.cert.pem"
+#
+pk = "file:///var/aziot/secrets/iot-edge-device-ca.key.pem"
+# pk = "pkcs11:slot-id=0;object=edge%20ca?pin-value=1234" # PKCS#11 URI
+
+# Edge CA certificate issued over EST:
+# ---------------------

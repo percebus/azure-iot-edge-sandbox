@@ -21,6 +21,9 @@
     "bower:install": "npm run bower -- install",
     "postinstall": "npm run bower:install",
     "update": "npm run bower:install && npm run iotedge:tools:CACertificates:update",
+    "build": "bash scripts/build.ba.sh",
+    "predist": "npm run build",
+    "dist": "gulp",
     "test": "exit 0"
   },
   "repository": {

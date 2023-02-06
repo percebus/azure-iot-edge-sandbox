@@ -4,7 +4,7 @@ const tar = require("gulp-tar");
 
 exports.default = () =>
   gulp
-    .src("tmp/EFLOW/**")
+    .src("build/**")
     .pipe(tar("eflow.tar"))
     // .pipe(gzip()) // TODO? or XXX?
     .pipe(gulp.dest("dist"));

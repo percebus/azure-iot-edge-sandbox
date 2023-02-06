@@ -1,5 +1,7 @@
 !tmp/.gitkeep
 tmp/*
+build/
+dist/
 
 ###################
 ### node ignore ###
