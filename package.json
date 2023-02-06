@@ -4,7 +4,7 @@
   "description": "Azure IoT Edge sandbox",
   "main": "app/index.js",
   "scripts": {
-    "npm:install:global": "npm install --location=global bower",
+    "npm:install:global": "npm install --location=global bower gulp-cli",
     "setup": "npm run npm:install:global",
     "setup:ci": "npm run setup",
     "prettier": "prettier .",
@@ -40,6 +40,9 @@
   },
   "homepage": "https://github.com/percebus/azure-iot-edge-sandbox#readme",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-gzip": "^1.4.2",
+    "gulp-tar": "^3.1.0",
     "prettier": "^2.8.3"
   }
 }

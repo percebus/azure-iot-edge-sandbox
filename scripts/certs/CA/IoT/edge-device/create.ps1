@@ -1,6 +1,10 @@
-[string]$deviceId = "TEST-gateway"
+# [string]$deviceId = "TEST-gateway"
+[string]$deviceId = "TEST-connectivity"
 
 # IoT Edge Device
+
+# Create identity certificate for the IoT Edge device
 New-CACertsEdgeDeviceIdentity $deviceId
-New-CACertsEdgeDeviceCA "$deviceId-1"
-New-CACertsEdgeDeviceCA "$deviceId-2"
+
+# Create edge CA certificates
+New-CACertsEdgeDeviceCA $deviceId
