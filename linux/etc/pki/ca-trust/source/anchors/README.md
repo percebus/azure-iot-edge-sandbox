@@ -1,4 +1,3 @@
-
 ```
 # Copy root certificate into the CA certificate directory and add .crt extension.
 # The root certificate must be in the CA certificate directory to install it in the certificate store.
