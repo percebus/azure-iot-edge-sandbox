@@ -23,5 +23,3 @@ find /var/aziot/secrets -type f -name "*.*" -exec chmod 600 {} \;
 
 # Verify permissions of directories and files
 ls -Rla /var/aziot
-
-iotedge config apply
