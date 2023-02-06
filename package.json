@@ -14,12 +14,13 @@
     "lint:sh": "bash scripts/bash/lint.ba.sh",
     "lint:all": "npm run prettier:check",
     "lint": "npm run lint:sh && npm run lint:all",
-    "cp:iotedge:tools:CACertificates": "bash scripts/iotedge/tools/CACertificates/update.ba.sh",
+    "iotedge:tools:CACertificates:update": "bash scripts/iotedge/tools/CACertificates/update.ba.sh",
     "bower": "bower --allow-root",
     "bower:update": "npm  run bower -- update",
     "prebower:install": "npm run bower:update",
     "bower:install": "npm run bower -- install",
-    "update": "npm run bower:install && npm run cp:iotedge:tools:CACertificates",
+    "update": "npm run bower:install && npm run iotedge:tools:CACertificates:update",
+    "postinstall": "npm run update",
     "test": "exit 0"
   },
   "repository": {
