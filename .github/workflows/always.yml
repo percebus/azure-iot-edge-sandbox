@@ -34,8 +34,9 @@ jobs:
       #   with:
       #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: ssh git@GitHub.com # XXX
-        run: ssh -vT git@github.com
+      # XXX
+      # - name: ssh git@GitHub.com
+      #   run: ssh -vT git@github.com
 
 
       - name: setup node
