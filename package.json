@@ -23,7 +23,7 @@
     "update": "npm run bower:install && npm run iotedge:tools:CACertificates:update",
     "build": "bash scripts/build.ba.sh",
     "predist": "npm run build",
-    "dist": "gulp",
+    "dist": "bash scripts/dist.ba.sh",
     "test": "exit 0"
   },
   "repository": {

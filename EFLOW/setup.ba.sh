@@ -1,7 +1,10 @@
 # SRC https://learn.microsoft.com/en-us/azure/iot-edge/how-to-create-transparent-gateway?view=iotedge-1.4&tabs=eflow
 
-tar -xf eflow.tar -C ./~/eflow
-cp -r ~/eflow/ /
+# WARNING
+# ~ is /home/iotedge-user
+# But when run as sudo (root)
+# it would be /root
+cp -r ./eflow/ /
 
 sudo chown aziotcs:aziotcs /var/aziot/certs
 sudo chmod 755 /var/aziot/certs
