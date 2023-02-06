@@ -4,12 +4,14 @@
 # ~ is /home/iotedge-user
 # But when run as sudo (root)
 # it would be /root
-cp --verbose -r ./eflow/ /
+cp --verbose -r ./* /
 
-sudo chown aziotcs:aziotcs /var/aziot/certs
-sudo chmod 755 /var/aziot/certs
-sudo chown aziotcs:aziotcs /var/aziot/certs/*.cert.pem
+chown aziotcs:aziotcs /var/aziot/certs
+chown aziotcs:aziotcs /var/aziot/certs/*.cert.pem
+chmod 755 /var/aziot/certs
 
-sudo chown aziotks:aziotks /var/aziot/secrets
-sudo chmod 700 /var/aziot/secrets
-sudo chmod 600 /var/aziot/secrets/*.key.pem
+chown aziotks:aziotks /var/aziot/secrets
+chmod 700 /var/aziot/secrets
+chmod 600 /var/aziot/secrets/*.key.pem
+
+iotedge config apply

@@ -22,15 +22,23 @@ $> npm run dist
 $> . ./scripts/deploy.ps1
 ```
 
-### Un-TAR
+#### un-`tar`
 
 ```bash
-iotedge-user@DESKTOP-SACB1K4-EFLOW [ ~ ]$> sudo bash
+iotedge-user@{user} [ ~ ]$> sudo bash
 ```
 
 ```bash
 root [ /home/iotedge-user ]$> mkdir -p eflow
 root [ /home/iotedge-user ]$> tar -xf eflow.tar -C ./eflow
+root [ /home/iotedge-user ]$> cd eflow
+root [ /home/iotedge-user ]$> ls . -la
+```
+
+#### install
+
+```bash
+root [ /home/iotedge-user ]$> bash ./setup.ba.sh
 ```
 
 ## Resources
