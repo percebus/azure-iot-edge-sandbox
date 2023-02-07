@@ -21,6 +21,7 @@
     "bower:install": "npm run bower -- install",
     "postinstall": "npm run bower:install",
     "update": "npm run bower:install && npm run CACertificates:update",
+    "prebuild": "npm run style",
     "build": "bash scripts/build.ba.sh",
     "predist": "npm run build",
     "dist": "bash scripts/dist.ba.sh",
