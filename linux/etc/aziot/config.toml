@@ -66,7 +66,7 @@ trust_bundle_cert = "file:///var/aziot/certs/azure-iot.root.ca.cert.pem"
 #                   in Dynamic and AlwaysOnStartup modes as well.
 #
 # auto_reprovisioning_mode = Dynamic
-auto_reprovisioning_mode = AlwaysOnStartup
+auto_reprovisioning_mode = "AlwaysOnStartup"
 #
 
 
@@ -321,9 +321,10 @@ identity_cert = "file:///var/aziot/certs/iot-device-ca.cert.pem"
 # type = "docker"
 # imagePullPolicy = "..."   # "on-create" or "never". Defaults to "on-create"
 
-[agent.config]
+# FIXME " missing field `name` for key `agent`
+# [agent.config]
 # image = "mcr.microsoft.com/azureiotedge-agent:1.4"
-image = "mcr.microsoft.com/azureiotedge-agent:1.4"
+# image = "mcr.microsoft.com/azureiotedge-agent:1.4"
 
 # createOptions = { HostConfig = { Binds = ["/iotedge/storage:/iotedge/storage"] } }
 
