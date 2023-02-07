@@ -1,5 +1,9 @@
 # 'To-Do's
 
+## Build
+
+- [ ] Template `config.toml`
+
 ## EFLOW
 
 ### Root CA

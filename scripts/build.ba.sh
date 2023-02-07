@@ -5,15 +5,15 @@
 device_id="TEST"
 
 rm -rf ./build/
-cp -r ./linux/ ${target_folder}/
+cp -r ./linux/ ./build/
 
 target_folder='./build/var/aziot'
 cp -r ./tmp/certs/root/*.root.ca.cert.pem ${target_folder}/certs
 
 # TODO? RENAME? 'edge-ca.pem'
 # As suggested in config.toml.edge.template
-cp -r ./tmp/certs/${device_id}/*-ca-*-full-chain.cert.pem ${target_folder}/certs
-cp -r ./tmp/certs/${device_id}/*-ca-*.key.pem ${target_folder}/secrets
+cp -r ./tmp/certs/${device_id}/*-ca*-full-chain.cert.pem ${target_folder}/certs
+cp -r ./tmp/certs/${device_id}/*-ca*.key.pem ${target_folder}/secrets
 
 eflow_folder='./build/etc/pki/ca-trust/source/anchors'
 
