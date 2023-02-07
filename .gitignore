@@ -3,6 +3,14 @@ tmp/*
 build/
 dist/
 
+# github.com/Azure/iotedge
+!CACertficates/*.ps1
+!CACertficates/*.sh
+!CACertficates/*.cnf
+!CACertficates/*.md
+CACertficates/**
+
+
 ###################
 ### node ignore ###
 ###################
