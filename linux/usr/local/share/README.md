@@ -1,7 +1,5 @@
 # README
 
-SRC https://learn.microsoft.com/en-us/azure/iot-edge/how-to-connect-downstream-iot-edge-device?view=iotedge-1.4&tabs=azure-cli
-
 ```
 # Copy root certificate into the CA certificate directory and add .crt extension.
 # The root certificate must be in the CA certificate directory to install it in the certificate store.

@@ -4,10 +4,9 @@ COPY . .
 RUN ls -la
 RUN npm run setup:ci --if-present
 RUN npm ci
-RUN ls -la ./tmp
-RUN npm run iotedge:tools:CACertificates:update
-RUN ls -la ./tmp/CACertificates
+RUN npm run CACertificates:update
+RUN ls -la ./CACertificates
 
 FROM base as certs
-RUN ./tmp/CACertificates/certGen.sh create_root_and_intermediate
-RUN ls -la ./tmp/CACertificates
+RUN ./CACertificates/certGen.sh create_root_and_intermediate
+RUN ls -la ./CACertificates
