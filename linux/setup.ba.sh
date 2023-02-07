@@ -8,18 +8,39 @@
 # So we use './'
 cp --verbose -r ./* /
 
+
+# chmod 755 /var # TODO?
+
+# /var/aziot:
+# drwxr-xr-x  4 root    root    4096 .
+# drwxr-xr-x 15 root    root    4096 ..
+chmod 755 /var/aziot
+
 # Give aziotcs ownership to certificates
 # Read and write for aziotcs, read-only for others
+#
+# /var/aziot/certs:
+# drwxr-xr-x 2 aziotcs aziotcs 4096 .
+# drwxr-xr-x 4 root    root    4096 ..
+# -rw-r--r-- 1 aziotcs aziotcs 1984 azure-iot[-test-only].root.ca.cert.pem
+# -rw-r--r-- 1 aziotcs aziotcs 5887 iot-edge-device-ca-{device_id}-full-chain.cert.pem
 chown -R aziotcs:aziotcs /var/aziot/certs
 chown aziotcs:aziotcs /var/aziot/certs/*.cert.pem
 chmod 755 /var/aziot/certs
+# chmod 644 /var/aziot/certs/*.pem
 find /var/aziot/certs -type f -name "*.*" -exec chmod 644 {} \;
 
 # Give aziotks ownership to private keys
 # Read and write for aziotks, no permission for others
+#
+# /var/aziot/secrets:
+# drwx------ 2 aziotks aziotks 4096 .
+# drwxr-xr-x 4 root    root    4096 ..
+# -rw------- 1 aziotks aziotks 3326 azure-iot[-test-only].root.ca.key.pem
+# -rw------- 1 aziotks aziotks 3243 iot-edge-device-ca-{device_id}.key.pem
 chown -R aziotks:aziotks /var/aziot/secrets
 chmod 700 /var/aziot/secrets
-chmod 600 /var/aziot/secrets/*.key.pem
+# chmod 600 /var/aziot/secrets/*.key.pem
 find /var/aziot/secrets -type f -name "*.*" -exec chmod 600 {} \;
 
 # Verify permissions of directories and files

@@ -4,16 +4,18 @@
 
 device_id=${AZ_IOT_EDGE_DEVICE_ID}
 
+
 rm -rf ./build/
 cp -r ./linux/ ./build/
-
 target_folder='./build/var/aziot'
-cp -r ./tmp/certs/root/*.root.ca.cert.pem ${target_folder}/certs
 
-# TODO? RENAME? 'edge-ca.pem'
-# As suggested in config.toml.edge.template
-cp -r ./tmp/certs/${device_id}/*-ca*-full-chain.cert.pem ${target_folder}/certs
-cp -r ./tmp/certs/${device_id}/*-ca*.key.pem ${target_folder}/secrets
+
+###################
+# root CA section #
+###################
+
+cp -r ./tmp/certs/root/*root.ca.cert.pem ${target_folder}/certs
+cp -r ./tmp/certs/root/*root.ca.key.pem ${target_folder}/secrets
 
 eflow_folder='./build/etc/pki/ca-trust/source/anchors'
 
@@ -23,7 +25,7 @@ eflow_folder='./build/etc/pki/ca-trust/source/anchors'
 #
 # root_ca_cert_short_name='trust-bundle'
 # root_ca_cert_full_name="${root_ca_cert_short_name}"
-
+#
 # XXX?
 root_ca_cert_short_name='azure-iot'
 root_ca_cert_full_name="${root_ca_cert_short_name}.root.ca.cert"
@@ -32,3 +34,13 @@ cp ${target_folder}/certs/${root_ca_cert_full_name}.pem ${eflow_folder}/${root_c
 
 linux_folder='./build/usr/local/share'
 cp ${eflow_folder}/${root_ca_cert_full_name}.pem.crt ${linux_folder}/${root_ca_cert_full_name}.pem.crt
+
+
+###################
+# Edge CA section #
+###################
+
+# TODO? RENAME? 'edge-ca.pem'
+# As suggested in config.toml.edge.template
+cp -r ./tmp/certs/${device_id}/*.cert.pem ${target_folder}/certs
+cp -r ./tmp/certs/${device_id}/*.key.pem ${target_folder}/secrets

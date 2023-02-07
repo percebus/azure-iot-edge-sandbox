@@ -126,13 +126,16 @@ device_id = "FIXME"
 method = "x509"
 
 ## identity certificate private key
-identity_pk = "file:///var/aziot/secrets/iot-device-ca.key.pem"
+identity_pk = "file:///var/aziot/secrets/iot-edge-device-identity.key.pem"
+# identity_pk = "file:///var/aziot/secrets/iot-edge-device-ca.key.pem"
 # identity_pk = "file:///var/secrets/device-id.key.pem"              # file URI, or...
 # identity_pk = "pkcs11:slot-id=0;object=device%20id?pin-value=1234" # PKCS#11 URI
 
 ## identity certificate
 # identity_cert = "file:///var/secrets/device-id.pem"                # file URI, or...
-identity_cert = "file:///var/aziot/certs/iot-device-ca.cert.pem"
+# identity_cert = "file:///var/aziot/certs/iot-edge-device-ca.cert.pem"
+# identity_cert = "file:///var/aziot/certs/iot-edge-device-identity.cert.pem"
+identity_cert = "file:///var/aziot/certs/iot-edge-device-identity-full-chain.cert.pem"
 
 # [provisioning.authentication.identity_cert]                        # dynamically issued via...
 # method = "est"                                                     # - EST
