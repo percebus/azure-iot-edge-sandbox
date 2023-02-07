@@ -1,5 +1,4 @@
-# [string]$deviceId = "TEST-gateway"
-[string]$deviceId = "JCGuerrero-DELL"
+[string]$deviceId = "TEST"
 
 # IoT Edge Device
 
