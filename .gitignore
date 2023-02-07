@@ -4,11 +4,11 @@ build/
 dist/
 
 # github.com/Azure/iotedge
-!CACertficates/*.ps1
-!CACertficates/*.sh
-!CACertficates/*.cnf
-!CACertficates/*.md
-CACertficates/**
+!CACertificates/*.ps1
+!CACertificates/*.sh
+!CACertificates/*.cnf
+!CACertificates/*.md
+CACertificates/
 
 
 ###################
