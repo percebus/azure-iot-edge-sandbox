@@ -1,1 +1,3 @@
 export AZ_IOT_EDGE_DEVICE_ID=FIXME
+export AZ_IOT_HUB_NAME=FIXME
+export AZ_IOT_HUB_HOST='FIXME.az-devices.net'
