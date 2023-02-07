@@ -3,11 +3,15 @@ tmp/*
 build/
 dist/
 
+!env/*.md
+!env/*.template
+env/*.sh
+
 # github.com/Azure/iotedge
+!CACertificates/*.md
 !CACertificates/*.ps1
 !CACertificates/*.sh
 !CACertificates/*.cnf
-!CACertificates/*.md
 CACertificates/
 
 

@@ -1,4 +1,4 @@
-[string]$deviceId = "TEST"
+[string]$deviceId = "TEST-edge"
 
 # IoT Edge Device
 

@@ -7,8 +7,8 @@
 
 # Create the parent (gateway) device test certificate
 # signed by the shared root CA certificate
-./certGen.sh create_edge_device_ca_certificate "TEST-gateway"
+./certGen.sh create_edge_device_ca_certificate "gateway"
 
 # Create the downstream device test certificate
 # signed by the shared root CA certificate
-./certGen.sh create_edge_device_ca_certificate "TEST-connectivity"
+./certGen.sh create_edge_device_ca_certificate "downstream"

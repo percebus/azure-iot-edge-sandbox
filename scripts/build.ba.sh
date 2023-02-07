@@ -2,7 +2,7 @@
 # TODO replace w/ gulp
 # SRC https://learn.microsoft.com/en-us/azure/iot-edge/how-to-connect-downstream-iot-edge-device?view=iotedge-1.4&tabs=azure-cli
 
-device_id="TEST"
+device_id=${AZ_IOT_EDGE_DEVICE_ID}
 
 rm -rf ./build/
 cp -r ./linux/ ./build/
