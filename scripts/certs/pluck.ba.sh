@@ -17,7 +17,6 @@ cp ${source_folder}/certs/* ${target_folder}/
 cp ${source_folder}/csr/* ${target_folder}/
 cp ${source_folder}/private/* ${target_folder}/
 
-# nomralize 'test-only' w/ actual prd certs
 for f in ${target_folder}/*; do
   mv "$f" "$(echo "$f" | sed s/-test-only//)"
 done

@@ -1,3 +1,4 @@
+
 !tmp/.gitkeep
 tmp/*
 build/
@@ -13,6 +14,9 @@ env/*.sh
 !CACertificates/*.sh
 !CACertificates/*.cnf
 CACertificates/
+
+# XXX? weird
+!scripts/CACertificates/setup.ps1
 
 
 ###################

@@ -1,3 +1,5 @@
+# SRC: https://learn.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-on-windows-x509?view=iotedge-1.4&tabs=azure-cli
+
 [string]$iotHubHostname=FIXME
 [string]$deviceId=FIXME
 [string]$projectFolder=FIXME
