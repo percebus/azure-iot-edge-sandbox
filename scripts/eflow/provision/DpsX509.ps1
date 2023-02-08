@@ -5,7 +5,7 @@
 [string]$registrationId=$deviceId
 [string]$projectFolder=FIXME
 [string]$certsFolder="$projectFolder\tmp\certs\$deviceId"
-[string]$identityCertPath="$certsFolder\iot-edge-device-idendity-full-chain.cert.pem"
+[string]$identityCertPath="$certsFolder\iot-edge-device-identity-full-chain.cert.pem"
 [string]$identityPrivKeyPath="$certsFolder\iot-edge-device-identity.key.pem"
 
 echo "scopeId = '$scopeId'"
@@ -13,7 +13,7 @@ echo "registrationId = '$registrationId'"
 echo "projectFolder = '$projectFolder'"
 echo "certsFolder = '$certsFolder'"
 echo "identityCertPath = '$identityCertPath'"
-echo "identityPrivateKey = '$identityPrivateKey'"
+echo "identityPrivKeyPath = '$identityPrivKeyPath'"
 echo "\n\n"
 
 Provision-EflowVm -provisioningType DpsX509 `
