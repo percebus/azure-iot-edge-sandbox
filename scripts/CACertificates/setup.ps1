@@ -4,6 +4,6 @@
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 # Load CA Certs functions
-. .\ca-certs.ps1
+. .\CACertificates\ca-certs.ps1
 
 Test-CACertsPrerequisites
