@@ -118,15 +118,17 @@ auto_reprovisioning_mode = "AlwaysOnStartup"
 
 ## Manual provisioning with X.509 certificate
 [provisioning]
-source = "manual"
-iothub_hostname = "FIXME.azure-devices.net"
-device_id = "FIXME"
+source = "dps"
+global_endpoint = "https://global.azure-devices-provisioning.net"
+id_scope = FIXME
 
-[provisioning.authentication]
+[provisioning.attestation]
 method = "x509"
+registration_id = FIXME
 
 ## identity certificate private key
-identity_pk = "file:///var/aziot/secrets/iot-edge-device-id.key.pem"
+identity_pk = "file:///var/secrets/private/iot-edge-device-identity.key.pem"
+# identity_pk = "file:///var/aziot/secrets/iot-edge-device-identity.key.pem"
 # identity_pk = "file:///var/aziot/secrets/iot-edge-device-ca.key.pem"
 # identity_pk = "file:///var/secrets/device-id.key.pem"              # file URI, or...
 # identity_pk = "pkcs11:slot-id=0;object=device%20id?pin-value=1234" # PKCS#11 URI
@@ -135,7 +137,8 @@ identity_pk = "file:///var/aziot/secrets/iot-edge-device-id.key.pem"
 # identity_cert = "file:///var/secrets/device-id.pem"                # file URI, or...
 # identity_cert = "file:///var/aziot/certs/iot-edge-device-ca.cert.pem"
 # identity_cert = "file:///var/aziot/certs/iot-edge-device-identity.cert.pem"
-identity_cert = "file:///var/aziot/certs/iot-edge-device-id-full-chain.cert.pem"
+# identity_cert = "file:///var/aziot/certs/iot-edge-device-identity-full-chain.cert.pem"
+identity_cert = "file:///var/secrets/certs/iot-edge-device-identity-full-chain.cert.pem"
 
 # [provisioning.authentication.identity_cert]                        # dynamically issued via...
 # method = "est"                                                     # - EST
