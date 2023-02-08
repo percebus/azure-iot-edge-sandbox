@@ -1,5 +1,59 @@
 # azure-iot-edge-sandbox
 
+## Setup
+
+### First Time
+
+```bash
+$> npm run setup
+```
+
+### BaU
+
+```bash
+$> npm install
+```
+
+### CACertificates
+
+```bash
+$> npm run update
+```
+
+## Certificates
+
+### Bash
+
+TODO
+
+### PowerShell
+
+#### Setup
+
+Load libraries
+
+```powershell
+$> . .\CACertificates\ca-certs.ps1
+```
+
+#### Root CA cert
+
+```powershell
+$> . .\scripts\CACertificates\chain\create.ps1
+```
+
+#### Edge Device CA & identity certs
+
+```powershell
+$> . .\scripts\CACertificates\IoT\edge-devoce\create.ps1
+```
+
+### Copy certs
+
+```bash
+$> bash ./scripts/pluck.ba.sh
+```
+
 ## Build
 
 ### `./build`
