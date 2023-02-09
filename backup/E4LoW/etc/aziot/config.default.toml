@@ -248,11 +248,3 @@ additional_info="file:///etc/product-info.toml"
 # [aziot_keys]
 # pkcs11_lib_path = "/usr/lib/libmypkcs11.so"
 # pkcs11_base_slot = "pkcs11:slot-id=0?pin-value=1234"
-[provisioning]
-source = "manual"
-iothub_hostname = FIXME
-device_id = FIXME
-[provisioning.authentication]
-method = "x509"
-identity_cert = "file:///var/secrets/certs/iot-edge-device-identity-full-chain.cert.pem"
-identity_pk = "file:///var/secrets/private/iot-edge-device-identity.key.pem"
