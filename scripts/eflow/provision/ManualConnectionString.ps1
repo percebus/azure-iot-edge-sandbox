@@ -2,5 +2,6 @@
 
 [string]$devConnString=FIXME
 
-Provision-EflowVm -provisioningType ManualConnectionString ^
+Provision-EflowVm `
+  -provisioningType ManualConnectionString `
   -devConnString $devConnString

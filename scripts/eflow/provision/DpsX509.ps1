@@ -16,7 +16,8 @@ echo "identityCertPath = '$identityCertPath'"
 echo "identityPrivKeyPath = '$identityPrivKeyPath'"
 echo "\n\n"
 
-Provision-EflowVm -provisioningType DpsX509 `
+Provision-EflowVm ^
+  -provisioningType DpsX509 `
   -scopeId "$scopeId" `
   -registrationId "$registrationId" `
   -identityCertPath "$identityCertPath" `
