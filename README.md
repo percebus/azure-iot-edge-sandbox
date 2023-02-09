@@ -89,6 +89,12 @@ root [ /home/iotedge-user ]$> cd eflow
 root [ /home/iotedge-user ]$> ls . -la
 ```
 
+Or of you prefer a Copy+Paste in a single line
+
+```bash
+$> mkdir eflow && tar -xf eflow.tar -C ./eflow && cd eflow && ls -la
+```
+
 #### install
 
 ```bash
