@@ -14,5 +14,8 @@ services:
       - ./data/mosquitto/data:/mosquitto/data
       - ./data/mosquitto/log:/mosquitto/log
     ports:
-      - 1883:1883
-      # - 9001:9001
+      - 8883:1883
+
+  # TODO
+  # Add RabbitMQ broker?
+  # Port 5671

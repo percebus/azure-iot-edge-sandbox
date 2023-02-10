@@ -59,10 +59,6 @@ ls -Rla /var/aziot
 # rm -f /var/lib/aziot/keyd/keys/*   # TODO
 
 
-# TODO fallback
-# update-ca-certificates || (update-ca-trust && exit 1)
-
-
 set +x
 set +v
 set +e
