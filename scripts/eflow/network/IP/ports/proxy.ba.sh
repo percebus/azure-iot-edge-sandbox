@@ -1,7 +1,8 @@
 
-# port='443'
-# port='5671'
-# port='8883'
+# port='443'  # HTTPS
+# port='5000' # Docker registry
+# port='5671' # AMQPS
+# port='8883' # MQTTS
 
 listenaddress='0.0.0.0'
 eflow_address=FIXME
