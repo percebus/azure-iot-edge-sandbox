@@ -5,7 +5,8 @@ services:
     # volumes:
     #   - .:/project
     ports:
-      - 443:3000
+      - 443:443 # SSL
+      - 3000:3000
 
   mosquitto:
     image: eclipse-mosquitto:2
@@ -14,8 +15,11 @@ services:
       - ./data/mosquitto/data:/mosquitto/data
       - ./data/mosquitto/log:/mosquitto/log
     ports:
-      - 8883:1883
+      # [M]essage [Q]ueuing [T]elemetry [T]ransport protocol
+      - 1883:1883 # MQTT
+      - 8883:1883 # MQTTS # TODO
 
   # TODO
   # Add RabbitMQ broker?
-  # Port 5671
+  # Port 5671 # AMQPS protocol over TLS/SSL
+  # Port 5672 # AMQP protocol over TLS/SSL
