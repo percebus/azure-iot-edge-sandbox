@@ -1,0 +1,2 @@
+
+iotedge system restart

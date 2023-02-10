@@ -1,0 +1,2 @@
+
+iotedge list --verbose

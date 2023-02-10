@@ -1,0 +1,2 @@
+
+iotedge check --verbose

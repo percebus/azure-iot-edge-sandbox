@@ -15,8 +15,10 @@ env/*.sh
 !CACertificates/*.cnf
 CACertificates/
 
+!scripts/**/*/logs*.sh
+
 # XXX? weird
-!scripts/CACertificates/setup.ps1
+!scripts/**/*/setup.*
 
 
 ###################
