@@ -6,7 +6,7 @@ device_id=${AZ_IOT_EDGE_DEVICE_ID}
 
 
 rm -rf ./build/
-cp -r ./linux/ ./build/
+cp -r ./containers/edge/ ./build/
 target_folder='./build/var/aziot'
 
 

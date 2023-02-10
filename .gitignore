@@ -8,6 +8,10 @@ dist/
 !env/*.template
 env/*.sh
 
+data/
+
+password.txt
+
 # github.com/Azure/iotedge
 !CACertificates/*.md
 !CACertificates/*.ps1

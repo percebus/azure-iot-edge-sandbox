@@ -1,6 +1,11 @@
 # SRC: https://learn.microsoft.com/en-us/azure/iot-edge/how-to-create-transparent-gateway?view=iotedge-1.4&tabs=eflow
 # SRC: https://learn.microsoft.com/en-us/azure/iot-edge/how-to-connect-downstream-iot-edge-device?view=iotedge-1.4&tabs=azure-cli
 
+set -e
+set -v
+set -x
+
+
 # WARNING
 # ~ is '/home/iotedge-user'
 # But when run as sudo (root)
@@ -52,3 +57,12 @@ ls -Rla /var/aziot
 # to make sure that your new certificates get applied:
 # rm -f /var/lib/aziot/certd/certs/* # TODO
 # rm -f /var/lib/aziot/keyd/keys/*   # TODO
+
+
+# TODO fallback
+# update-ca-certificates || (update-ca-trust && exit 1)
+
+
+set +x
+set +v
+set +e

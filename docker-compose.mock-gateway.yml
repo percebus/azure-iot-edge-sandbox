@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  webapp:
+    build: .
+    # volumes:
+    #   - .:/project
+    ports:
+      - 443:3000
+
+  mosquitto:
+    image: eclipse-mosquitto:2
+    volumes:
+      - ./containers/mosquitto/config:/mosquitto/config
+      - ./data/mosquitto/data:/mosquitto/data
+      - ./data/mosquitto/log:/mosquitto/log
+    ports:
+      - 1883:1883
+      # - 9001:9001
