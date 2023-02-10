@@ -1,0 +1,12 @@
+additional_info="file:///etc/product-info.toml"
+
+[provisioning]
+source = "dps"
+global_endpoint = "https://global.azure-devices-provisioning.net"
+id_scope = FIXME
+
+[provisioning.attestation]
+method = "x509"
+registration_id = FIXME
+identity_cert = "file:///var/secrets/certs/iot-edge-device-identity-full-chain.cert.pem"
+identity_pk = "file:///var/secrets/private/iot-edge-device-identity.key.pem"
