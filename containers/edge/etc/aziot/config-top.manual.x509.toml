@@ -12,7 +12,6 @@ device_id = FIXME
 
 [provisioning.authentication]
 method = "x509"
-
 identity_cert = "file:///var/aziot/certs/iot-edge-device-identity-full-chain.cert.pem"
 identity_pk = "file:///var/aziot/secrets/iot-edge-device-identity.key.pem"
 

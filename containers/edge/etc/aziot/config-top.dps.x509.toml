@@ -13,7 +13,6 @@ id_scope = FIXME
 [provisioning.attestation]
 method = "x509"
 registration_id = FIXME
-
 identity_cert = "file:///var/aziot/certs/iot-edge-device-identity-full-chain.cert.pem"
 identity_pk = "file:///var/aziot/secrets/iot-edge-device-identity.key.pem"
 
