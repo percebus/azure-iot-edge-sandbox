@@ -1,0 +1,23 @@
+additional_info="file:///etc/product-info.toml"
+
+hostname = FIXME
+trust_bundle_cert = "file:///var/aziot/certs/azure-iot.root.ca.cert.pem"
+auto_reprovisioning_mode = "AlwaysOnStartup"
+
+
+[provisioning]
+source = "dps"
+global_endpoint = "https://global.azure-devices-provisioning.net"
+id_scope = FIXME
+
+[provisioning.attestation]
+method = "x509"
+registration_id = FIXME
+
+identity_cert = "file:///var/aziot/certs/iot-edge-device-identity-full-chain.cert.pem"
+identity_pk = "file:///var/aziot/secrets/iot-edge-device-identity.key.pem"
+
+
+[edge_ca]
+cert = "file:///var/aziot/certs/iot-edge-device-ca-full-chain.cert.pem"
+pk = "file:///var/aziot/secrets/iot-edge-device-ca.key.pem"

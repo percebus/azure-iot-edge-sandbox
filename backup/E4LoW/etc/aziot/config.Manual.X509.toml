@@ -248,6 +248,17 @@ additional_info="file:///etc/product-info.toml"
 # [aziot_keys]
 # pkcs11_lib_path = "/usr/lib/libmypkcs11.so"
 # pkcs11_base_slot = "pkcs11:slot-id=0?pin-value=1234"
+
+
+# SRC: https://learn.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-on-windows-x509?view=iotedge-1.4&tabs=azure-cli
+# NOTE: Generated with
+# Provision-EflowVm `
+#  -provisioningType ManualX509 `
+#  -iotHubHostname $iotHubHostname `
+#  -deviceId $deviceId `
+#  -identityCertPath $identityCertPath `
+#  -identityPrivKeyPath $identityPrivKeyPath
+
 [provisioning]
 source = "manual"
 iothub_hostname = FIXME
